@@ -32,3 +32,10 @@ export function incrementAsync(delay = 1000) {
     }, delay)
   }
 }
+
+export function incrementTwice() {
+  return dispatch => {
+    dispatch(increment());
+    dispatch(increment());
+  }
+}
