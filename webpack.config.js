@@ -3,10 +3,12 @@ var webpack = require('webpack')
 
 module.exports = {
   devtool: 'cheap-module-eval-source-map',
+  // 対象ファイル
   entry: [
     'webpack-hot-middleware/client',
     './index'
   ],
+  // メモリ上で出力されるコンパイルされたファイル（実際にはファイルは作成されない）
   output: {
     path: path.join(__dirname, 'dist'),
     filename: 'bundle.js',
